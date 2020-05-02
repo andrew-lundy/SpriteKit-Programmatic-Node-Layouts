@@ -82,7 +82,7 @@ class GameScene: SKScene {
         addChild(audioOffButton)
 
         modesTitle.size = titleSize
-        modesTitle.position = CGPoint(x: margin + 5, y: audioTitle.position.y - 150)
+        modesTitle.position = CGPoint(x: margin + 5, y: audioTitle.position.y - 140)
         addChild(modesTitle)
 
         modeReverseGravityButton.size = buttonSize
@@ -96,16 +96,25 @@ class GameScene: SKScene {
         themesTitle.size = titleSize
         themesTitle.position = CGPoint(x: margin + 15, y: modeSpeedButton.position.y - 75)
         addChild(themesTitle)
+
         
-        let themeNames = ["Blues", "Reds", "Greens", "Oranges", "Purples", "Pinks", "Elements", "Metals", "OuterSpace", "IceCream"]
+        
+        // Code for Blog Starts Here
+        let themeNames = ["Blues", "Reds", "Greens", "Oranges", "Purples",
+                          "Pinks", "Elements", "Metals", "OuterSpace", "IceCream"]
         
         for i in 0...3 {
             addChild(addThemeImage(at: CGPoint(x: 150 + (i * 150), y: Int(themesTitle.position.y) - 100), themeName: "Theme_\(themeNames[i])"))
         }
         
+        for i in 4...6 {
+            addChild(addThemeImage(at: CGPoint(x: -375 + (i * 150), y: Int(themesTitle.position.y) - 200), themeName: "Theme_\(themeNames[i])"))
+        }
+        
+
     }
     
-    
+    // Function for Blog
     func addThemeImage(at position: CGPoint, themeName: String) -> SKSpriteNode {
         var themeNameSprite: SKSpriteNode!
         themeNameSprite = SKSpriteNode(imageNamed: themeName)
