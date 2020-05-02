@@ -70,7 +70,7 @@ class GameScene: SKScene {
         addChild(optionsTitle)
         
         audioTitle.size = titleSize
-        audioTitle.position = CGPoint(x: margin, y: optionsTitle.position.y - 300)
+        audioTitle.position = CGPoint(x: margin, y: optionsTitle.position.y - 200)
         addChild(audioTitle)
 
         audioOnButton.size = buttonSize
@@ -82,7 +82,7 @@ class GameScene: SKScene {
         addChild(audioOffButton)
 
         modesTitle.size = titleSize
-        modesTitle.position = CGPoint(x: margin + 5, y: audioTitle.position.y - 100)
+        modesTitle.position = CGPoint(x: margin + 5, y: audioTitle.position.y - 150)
         addChild(modesTitle)
 
         modeReverseGravityButton.size = buttonSize
